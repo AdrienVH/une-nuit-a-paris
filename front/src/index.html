@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>Une nuit à Paris</title>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js"></script>
+		<link href="https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+	</head>
+	<body>
+		<h1>Une nuit à Paris</h1>
+		<div id="carte"></div>
+		<script>
+			// Map
+			var map = L.mapbox.map('carte', 'adrienvh.hf43flld', {
+				minZoom:13, maxZoom:17,
+				maxBounds:L.latLngBounds(L.latLng(48.8198, 2.2593), L.latLng(48.9015, 2.4145)) //SW, NE
+			});
+			// zoomControl
+			map.zoomControl.removeFrom(map);
+		</script>
+		<div id="legende">
+			<ul>
+				<li>Hôtels :&nbsp;</li>
+				<li class="carton" style="background-color:rgba(22,63,103,0.5);">1</li>
+				<li class="carton" style="background-color:rgba(55,104,153,0.5);">2</li>
+				<li class="carton" style="background-color:rgba(99,144,189,0.5);">3</li>
+				<li class="carton" style="background-color:rgba(236,224,112,0.5);">4</li>
+				<li class="carton" style="background-color:rgba(204,153,51,0.5);">5</li>
+				<li style="background-color:rgba(255,255,255,0.5);">étoiles</li>
+			</ul>
+		</div>
+	</body>
+</html>

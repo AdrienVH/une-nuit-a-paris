@@ -1,0 +1,62 @@
+body, * {
+	margin:0;
+	padding:0;
+	color:dimgrey;
+}
+
+.clear {
+	clear:both;
+}
+
+#carte {
+	position:absolute;
+	top:0;
+	bottom:0;
+	width:100%;
+}
+
+h1 {
+	z-index:9999;
+	margin:0;
+	padding:3px 15px;
+	position:absolute;
+	top:15px;
+	left:15px;
+	color:dimgrey;
+	font-family: 'Parisienne', cursive;
+	background-color:rgba(255,255,255,0.75);
+	border:1px solid rgb(210,210,210);
+	border-radius:3px;
+}
+
+div#legende {
+	z-index:9999;
+	margin:0;
+	padding:10px;
+	position:absolute;
+	top:15px;
+	right:15px;
+	background-color:rgba(255,255,255,0.75);
+	border:1px solid rgb(210,210,210);
+	border-radius:3px;
+}
+
+div#legende ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+div#legende ul li {
+	float:left;
+	padding:0 5px;
+	color:dimgrey;
+	font-size:18px;
+	font-family: 'Parisienne', cursive;
+	color:dimgrey;
+	text-align:center;
+}
+
+div#legende ul li.carton {
+	width:20px;
+}
